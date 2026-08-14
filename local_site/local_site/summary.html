@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A concise, evidence-backed summary of information-geometric port-Hamiltonian learning for adaptive B-spline deformation.">
-  <title>Adaptive B-Spline Deformation — Project Summary</title>
+  <meta name="description" content="Problem formulation, parameter space, numerical method, and evidence for information-geometric port-Hamiltonian B-spline deformation.">
+  <title>Adaptive B-Spline Deformation — Project Statement</title>
   <script>
     window.MathJax = {tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},chtml:{scale:1}};
   </script>
@@ -19,23 +19,25 @@
     section{padding:66px 0;border-top:1px solid var(--line);scroll-margin-top:64px}.section-head{display:grid;grid-template-columns:170px minmax(0,1fr);gap:38px;margin-bottom:32px}.section-label{margin-top:4px}h2{margin:0;font:500 clamp(32px,4.5vw,50px)/1.1 Georgia,"Times New Roman",serif;letter-spacing:-.03em}.prose{max-width:770px;margin-left:208px}.prose p:first-child{margin-top:0}.lead{font-size:18px;line-height:1.65}
     .equations{display:grid;gap:14px;margin-top:32px}.equation{overflow-x:auto;padding:22px 24px;border:1px solid var(--line);border-radius:8px;background:white}.equation .tex{min-width:max-content;text-align:center;font-size:18px}.equation small{display:block;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font:12px/1.5 Inter,ui-sans-serif,system-ui,sans-serif;white-space:normal}
     .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:35px;border:1px solid var(--line);background:var(--line)}.model-grid article{min-height:220px;padding:24px;background:var(--paper)}.model-grid span{color:var(--accent);font:500 22px Georgia,serif}.model-grid h3{margin:24px 0 8px;font:500 23px Georgia,serif}.model-grid p{margin:0;color:var(--muted);font-size:14px}
+    .dimension-note{margin-top:18px;padding:18px 20px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--muted);font-size:14px}.dimension-note b{color:var(--ink)}
     .certificate{margin-top:28px;padding:26px;border-radius:8px;color:white;background:var(--ink)}.certificate strong{display:block;margin-bottom:12px;color:#ffad96;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.certificate .math{overflow-x:auto;text-align:center;font-size:18px}.certificate p{margin:12px 0 0;color:#cad6d1;font-size:13px}.note{margin-top:24px;padding:18px 20px;border:1px solid #f0c6b8;border-radius:7px;background:var(--accent-soft);font-size:14px}.note strong{color:#9b2e1e}
+    .algorithm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}.algorithm-grid article{padding:20px;border:1px solid var(--line);border-radius:8px;background:white}.algorithm-grid span{display:block;margin-bottom:10px;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.12em}.algorithm-grid h3{margin:0 0 7px;font:500 20px Georgia,serif}.algorithm-grid p{margin:0;color:var(--muted);font-size:13px}.curriculum{margin-top:28px}
     .media-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.metric{padding:18px;border:1px solid var(--line);border-radius:7px;background:white}.metric strong{display:block;font:500 27px Georgia,serif}.metric span{color:var(--muted);font-size:11px;font-weight:760;letter-spacing:.08em;text-transform:uppercase}
     .table-wrap{overflow-x:auto;margin-top:30px;border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;background:white;font-size:13px}th,td{padding:13px 15px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:var(--muted);background:var(--soft);font-size:10px;letter-spacing:.09em;text-transform:uppercase}tbody tr:last-child td{border-bottom:0}td:first-child{font-weight:720}.good{color:var(--green);font-weight:800}.bad{color:#ad3422;font-weight:800}.data-links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:18px;font-size:12px;font-weight:720}.data-links a{text-underline-offset:3px}
     .limitations{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}.limitations article{padding:22px;border:1px solid var(--line);border-radius:7px;background:white}.limitations b{display:block;margin-bottom:6px;font:500 20px Georgia,serif}.limitations p{margin:0;color:var(--muted);font-size:14px}.takeaway{max-width:900px;margin:0 auto;text-align:center}.takeaway blockquote{margin:0;font:500 clamp(28px,4.5vw,48px)/1.25 Georgia,serif;letter-spacing:-.025em}.takeaway p{max-width:700px;margin:22px auto 0;color:var(--muted)}
     details{max-width:850px;margin:30px auto 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}summary{padding:16px 0;cursor:pointer;font-weight:760}pre{overflow-x:auto;margin:0 0 18px;padding:18px;background:var(--soft);font-size:12px;line-height:1.55;text-align:left}footer{padding:30px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}footer .wrap{display:flex;justify-content:space-between;gap:24px}
-    @media(max-width:820px){.section-head{grid-template-columns:1fr;gap:8px}.prose{margin-left:0}.model-grid{grid-template-columns:1fr}.model-grid article{min-height:0}.media-grid,.limitations{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}}@media(max-width:580px){.wrap{width:min(calc(100% - 28px),var(--max))}nav a:nth-child(2){display:none}.hero{padding-top:58px}section{padding:54px 0}.metrics{grid-template-columns:1fr}footer .wrap{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media(max-width:820px){.section-head{grid-template-columns:1fr;gap:8px}.prose{margin-left:0}.model-grid,.algorithm-grid{grid-template-columns:1fr}.model-grid article{min-height:0}.media-grid,.limitations{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}}@media(max-width:580px){.wrap{width:min(calc(100% - 28px),var(--max))}nav a:not(:last-child){display:none}.hero{padding-top:58px}section{padding:54px 0}.metrics{grid-template-columns:1fr}footer .wrap{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
-  <header class="topbar"><div class="wrap"><a class="brand" href="summary.html">CVC Lab</a><nav aria-label="Primary navigation"><a href="#model">Model</a><a href="#evidence">Evidence</a><a href="index.html">Interactive demo</a></nav></div></header>
+  <header class="topbar"><div class="wrap"><a class="brand" href="summary.html">CVC Lab</a><nav aria-label="Primary navigation"><a href="#model">Formulation</a><a href="#algorithm">Algorithm</a><a href="#evidence">Evidence</a><a href="index.html">Demo</a></nav></div></header>
   <main>
     <section class="hero" style="border-top:0"><div class="wrap">
       <p class="kicker">Circle → crescent case study</p>
       <h1>Information-Geometric Port-Hamiltonian Learning for Adaptive B-Spline Deformation</h1>
       <p class="subtitle">A structured deformation model in which target matching, spline representation, energy flow, and geometric admissibility are treated as distinct—and testable—parts of the problem.</p>
       <p class="affiliation">CVC Lab</p>
-      <div class="actions"><a class="button primary" href="index.html">Open interactive lab</a><a class="button" href="memo.pdf" target="_blank" rel="noopener">Read technical memo ↗</a><a class="button" href="assets/data/rollout-summary.csv" download>Download results CSV</a></div>
+      <div class="actions"><a class="button primary" href="index.html">Open interactive demo</a><a class="button" href="memo.pdf" target="_blank" rel="noopener">Read technical memo ↗</a></div>
       <figure class="hero-media"><img src="assets/sliced-w2-rollout.gif" alt="Animated diagnostic dashboard showing a periodic B-spline deforming from a circle toward a crescent target under the sliced Wasserstein potential."><figcaption><b>Recorded learned-PHT rollout, sliced W₂ potential.</b> The dashboard reports the curve, target, knots, energy terms, state norms, force diagnostics, and safety indicators throughout the run. It is shown as a diagnostic trajectory—not as a proof that every rollout remains admissible.</figcaption></figure>
     </div></section>
 
@@ -45,12 +47,15 @@
     </div></section>
 
     <section id="model"><div class="wrap">
-      <div class="section-head"><p class="section-label">01 · Model</p><h2>A finite spline state with a fixed-period knot chart.</h2></div>
+      <div class="section-head"><p class="section-label">01 · Problem formulation</p><h2>Search over an admissible spline configuration—not an unstructured point cloud.</h2></div>
       <div class="equations">
         <div class="equation"><div class="tex">\[K_{P,\delta}=\left\{\Delta\in\mathbb{R}^{m}:\Delta_i>\delta,\ \sum_i\Delta_i=P\right\},\qquad \widetilde Q=(\mathbb{R}^{2})^n\times K_{P,\delta}\]</div><small>The configuration consists of planar control vertices \(q\) and positive knot intervals \(\Delta\) with fixed total period \(P\). Memo, Eqs. (1)–(2).</small></div>
         <div class="equation"><div class="tex">\[\Delta_i(\gamma)=\delta+(P-m\delta)\,\operatorname{softmax}(\gamma)_i,\qquad \Delta(\gamma+c\mathbf{1})=\Delta(\gamma)\]</div><small>The softmax chart enforces positivity and period, but has a gauge direction. Any metric or learned update should account for that redundancy. Memo, Eq. (8).</small></div>
         <div class="equation"><div class="tex">\[E(q,\Delta)(u)=C_{q,\Delta}(u),\qquad \mu_\xi=\frac{1}{N}\sum_a\delta_{C_\xi(u_a)},\qquad V_Y(\xi)=D(\mu_\xi,\nu_Y)\]</div><small>The evaluation map produces the curve; the discrepancy \(D\) compares sampled source and target measures. Fixed parameter samples generally do not give exact reparameterization invariance. Memo, Eqs. (3), (10)–(11).</small></div>
+        <div class="equation"><div class="tex">\[[C_\star]=\left\{g\circ C_\star\circ\varphi:g\in G_{\mathrm{pose}},\ \varphi\in\operatorname{Diff}^{+}(S^1)\right\}\]</div><small>When parameterization or rigid pose is immaterial, the endpoint is a shape orbit rather than one control polygon. Pose may instead be retained as an explicit search variable in pose-sensitive experiments. Memo, Eqs. (7) and (24).</small></div>
+        <div class="equation"><div class="tex">\[\min_{\theta,\phi,K_p,z(\cdot)}\ \Phi_{\mathrm{term}}\!\left(z(T);[C_\star],Y\right)+\int_0^T\ell\!\left(z(t),\theta,\phi\right)\,\mathrm dt,\qquad \dot z=F_{\theta,\phi}(z;Y),\quad z\in T^*Q_{\mathrm{adm}}\]</div><small>The finite-horizon problem searches for a regular trajectory in the cotangent phase space whose evaluated curve reaches a target shape orbit or observation tolerance set. Memo, Eqs. (25)–(28).</small></div>
       </div>
+      <p class="dimension-note"><b>Parameter-space dimension.</b> On the smooth fixed-period stratum, \(\dim Q_{\mathrm{adm}}=2n+m-1\): there are \(2n\) planar control-point coordinates and \(m-1\) independent knot coordinates. The intrinsic phase space therefore has dimension \(2(2n+m-1)\). The implementation stores \(2(2n+m)\) scalars until the common-shift logit gauge is projected out.</p>
       <div class="model-grid"><article><span>\(q\)</span><h3>Control geometry</h3><p>Control vertices carry the finite-dimensional shape coordinates from which the periodic spline is evaluated.</p></article><article><span>\(\gamma\mapsto\Delta\)</span><h3>Adaptive resolution</h3><p>Knot logits redistribute a fixed period. This changes local resolution and continuity; it is not a topological operation.</p></article><article><span>\(D(\mu,\nu)\)</span><h3>Observation potential</h3><p>Sinkhorn OT, sliced \(W_2\), and related discrepancies define different pullback forces and local curvature.</p></article></div>
     </div></section>
 
@@ -61,8 +66,23 @@
       <div class="note"><strong>Implementation caveat.</strong> The current learned engine advances this field with full-state explicit Euler. That method is not dissipativity-preserving for arbitrary step size. A discrete-gradient step would instead inherit a stepwise energy certificate; see memo Eqs. (62)–(64).</div>
     </div></section>
 
+    <section id="algorithm"><div class="wrap">
+      <div class="section-head"><p class="section-label">03 · Numerical algorithm</p><h2>Evaluate, compare, pull back, advance, and certify.</h2></div>
+      <div class="prose"><p class="lead">The memo’s feedback-gated port-Hamiltonian algorithm separates the representation, target discrepancy, structured dynamics, and acceptance diagnostics. Environment parameters are frozen within each rollout stage so that energy changes remain interpretable.</p></div>
+      <div class="algorithm-grid">
+        <article><span>01</span><h3>Parameterize</h3><p>Map knot logits through the fixed-period softmax chart, then evaluate the periodic B-spline from \((q,\Delta)\).</p></article>
+        <article><span>02</span><h3>Compare</h3><p>Sample the curve and compute a finite-iteration Sinkhorn divergence or another declared observation potential.</p></article>
+        <article><span>03</span><h3>Pull back</h3><p>Differentiate the potential through spline evaluation to obtain forces on control points and knot logits.</p></article>
+        <article><span>04</span><h3>Select</h3><p>Use force and residual scores to activate complete coordinate–momentum blocks, with full-state refreshes as needed.</p></article>
+        <article><span>05</span><h3>Advance</h3><p>Construct skew \(J_\theta\) and positive-semidefinite \(R_\theta\), then take a pH state step with safeguarding.</p></article>
+        <article><span>06</span><h3>Accept and record</h3><p>Check energy defect, tangent regularity, separation, crossings, orientation, and knot floors before accepting the step.</p></article>
+      </div>
+      <div class="note"><strong>Implementation status.</strong> The learned engine currently uses unsafeguarded full-state forward Euler, while the canonical baseline uses a semi-implicit update. The acceptance checks above summarize the memo’s recommended safeguarded algorithm; backtracking or a discrete-gradient step is still required for a discrete energy certificate.</div>
+      <figure class="curriculum"><img src="assets/dimension_curriculum_trajectory_grid.png" alt="Grid of held-out spline rollouts across scale, translation, rotation, planar pose, and circle-to-crescent curriculum tasks."><figcaption><b>Dimension-structured curriculum.</b> Rows add search directions progressively, while columns test held-out geometry. The pose column labeled \(S^1\times\mathbb{R}^2\) represents the planar group \(SE(2)=SO(2)\ltimes\mathbb{R}^2\): rotation and translation are added explicitly to the configuration search alongside the spline and knot variables. This is distinct from quotienting pose out when only intrinsic shape is relevant.</figcaption></figure>
+    </div></section>
+
     <section id="evidence"><div class="wrap">
-      <div class="section-head"><p class="section-label">03 · Evidence</p><h2>The artifacts reveal both useful structure and failure modes.</h2></div>
+      <div class="section-head"><p class="section-label">04 · Evidence</p><h2>The recorded results reveal both useful structure and failure modes.</h2></div>
       <div class="media-grid">
         <figure><img src="assets/force-hessian-comparison.png" alt="Bar plots comparing fixed-state force norm and Hessian-vector-product magnitudes for Sinkhorn and sliced Wasserstein potentials."><figcaption><b>Fixed-state sensitivity.</b> Sinkhorn produces the larger force and local HVP magnitudes; sliced W₂ is smoother at this audited state. Source: <a href="assets/data/fixed-state-summary.csv">fixed-state CSV</a>.</figcaption></figure>
         <figure><img src="assets/energy-defect-vs-dt.png" alt="Log-log plot showing maximum positive one-step energy defect increasing with time step for Sinkhorn and sliced Wasserstein learned rollouts."><figcaption><b>Discrete energy audit.</b> Positive one-step energy defect grows sharply with step size for the learned explicit-Euler rollout. This is exactly the gap between the continuous law and the numerical scheme.</figcaption></figure>
@@ -75,25 +95,24 @@
         <tr><td>Learned PHT · sliced W₂</td><td>0.01</td><td class="bad">t = 0.22</td><td class="bad">+7.31×10<sup>−3</sup></td><td>0.02044</td></tr>
       </tbody></table></div>
       <p class="note"><strong>Interpretation.</strong> In these recorded tests, the canonical semi-implicit paths remained intersection-free and energy-decreasing. The learned explicit-Euler paths crossed early, even when the final energy was small. Low loss therefore does not certify an embedded curve.</p>
-      <div class="data-links"><span>Underlying data:</span><a href="assets/data/fixed-state-summary.csv">fixed-state summary</a><a href="assets/data/rollout-summary.csv">rollout summary</a><a href="assets/data/backward-summary.csv">backward-gradient summary</a><a href="assets/data/sliced-w2-dashboard-metrics.csv">full dashboard trace</a></div>
     </div></section>
 
     <section id="case-study"><div class="wrap">
-      <div class="section-head"><p class="section-label">04 · Case study</p><h2>A strong geometric match can coexist with representation warnings.</h2></div>
+      <div class="section-head"><p class="section-label">05 · Case study</p><h2>A strong geometric match can coexist with representation warnings.</h2></div>
       <figure><img src="assets/sliced-w2-final.png" alt="Final diagnostic dashboard for the sliced Wasserstein circle-to-crescent potential comparison run."><figcaption><b>Sliced W₂ potential-comparison endpoint, t = 5.</b> Recorded values: H = 0.004959, Chamfer = 0.002747, Hausdorff = 0.1397, zero segment crossings, and minimum knot interval 0.003828. The same dashboard flags knot-floor activity, so this should be read as a useful diagnostic result rather than a blanket safety certificate.</figcaption></figure>
     </div></section>
 
     <section id="next"><div class="wrap">
-      <div class="section-head"><p class="section-label">05 · Next</p><h2>What would turn the framework into a stronger certified solver?</h2></div>
+      <div class="section-head"><p class="section-label">06 · Next</p><h2>What would turn the framework into a stronger certified solver?</h2></div>
       <div class="limitations"><article><b>Enforce the embedded stratum</b><p>The current code monitors intersections but does not impose Q<sub>emb</sub> as a hard invariant. Add support-aware separation barriers and midpoint acceptance tests.</p></article><article><b>Use an energy-safe integrator</b><p>Replace or safeguard explicit Euler with backtracking or a discrete-gradient method carrying a stepwise dissipation certificate.</p></article><article><b>Respect gauge and pose structure</b><p>Separate the softmax gauge direction and SE(2) pose before combining Souriau and measurement information metrics.</p></article><article><b>Make learning relational</b><p>The present Transformer receives one flattened token and therefore behaves like a dense network. Tokenize control points, knots, or samples to create meaningful attention.</p></article></div>
     </div></section>
 
     <section><div class="wrap takeaway">
       <p class="section-label">Takeaway</p><blockquote>Target matching chooses where the curve should go. Structure and numerical auditing determine whether the path is admissible.</blockquote>
-      <p>The project already provides a strong diagnostic framework: adaptive spline coordinates, measure-space potentials, structured pH fields, gradient checks, and artifact-level audits. The results also identify the precise next step—carry the continuous geometric and energetic constraints into the discrete rollout.</p>
+      <p>The project provides a diagnostic framework built from adaptive spline coordinates, measure-space potentials, structured pH fields, gradient checks, and numerical audits. The results also identify the precise next step—carry the continuous geometric and energetic constraints into the discrete rollout.</p>
       <div class="actions"><a class="button primary" href="index.html">Test the deformation</a><a class="button" href="memo.pdf" target="_blank" rel="noopener">Open the memo</a></div>
     </div></section>
   </main>
-  <footer><div class="wrap"><span>CVC Lab · Project statement</span><span>Research memo and supporting artifacts</span></div></footer>
+  <footer><div class="wrap"><span>CVC Lab · Project statement</span><span>Problem, method, and numerical evidence</span></div></footer>
 </body>
 </html>
