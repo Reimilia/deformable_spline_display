@@ -1,0 +1,13 @@
+potential,dt,steps,differentiate_forces,first_nonfinite_forward_step,forward_finite,loss,parameter_grad_norm,parameter_gradients_finite,backward_error
+sinkhorn,0.05,10,False,,True,0.535480209977463,0.2964697762004029,True,
+sinkhorn,0.05,10,True,,True,0.5354808751954253,0.48492972556286523,True,
+sinkhorn,0.02,10,False,,True,0.05786446496005369,0.004658128987473155,True,
+sinkhorn,0.02,10,True,,True,0.057865433184234566,0.007674816423949559,True,
+sinkhorn,0.01,10,False,,True,0.4198178124071482,0.025028703550317156,True,
+sinkhorn,0.01,10,True,,True,0.4198199838118372,0.047349193324295,True,
+sliced_wasserstein,0.05,10,False,,True,0.3712468118986914,0.1434006145665102,True,
+sliced_wasserstein,0.05,10,True,,True,0.3712530223459531,0.25417671220451427,True,
+sliced_wasserstein,0.02,10,False,,True,0.05872353707965392,0.007785608599074698,True,
+sliced_wasserstein,0.02,10,True,,True,0.05872363983855074,0.01248075143888482,True,
+sliced_wasserstein,0.01,10,False,,True,0.35226691056363385,0.019961317752955402,True,
+sliced_wasserstein,0.01,10,True,,True,0.35226488901827385,0.03785005138715376,True,

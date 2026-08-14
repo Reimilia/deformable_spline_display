@@ -1,0 +1,35 @@
+# Development & build
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Runtime & temp files
+.runtime/
+*.log
+temp/
+tmp/
+
+# Python
+venv/
+env/
+.env
+
+# Build outputs
+/site/
+/out/
+
+# OS
+Thumbs.db
