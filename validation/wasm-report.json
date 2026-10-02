@@ -1,0 +1,6 @@
+{
+  "cases": 74,
+  "runtime": "0.28.3",
+  "maximum_absolute_error": 1.9547030660760356e-11,
+  "all_passed": true
+}

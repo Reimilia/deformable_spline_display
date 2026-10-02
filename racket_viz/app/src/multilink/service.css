@@ -1,7 +1,0 @@
-.service-settings{border:1px solid var(--border);border-radius:7px;padding:10px 11px;font-size:11px;color:#65768e;margin-bottom:18px}
-.service-settings summary{font-weight:600;cursor:pointer}
-.service-settings p{font-size:10px;line-height:1.6;margin:10px 0 0}
-.service-settings .pair{margin-top:10px}
-input[type=url]{display:block;width:100%;min-width:0;border:1px solid var(--border);border-radius:6px;padding:9px 8px;background:#fff;color:#34445b;font-size:11px;margin-top:6px}
-aside input:disabled{opacity:.45;cursor:default}
-@media(max-width:800px){.service-settings{grid-column:1/-1}}

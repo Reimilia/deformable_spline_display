@@ -1,0 +1,1632 @@
+{
+  "schema_version": 2,
+  "checkpoints": [
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pose.pt",
+      "label": "Holonomic \u00b7 Configuration \u00b7 Pose snapshot",
+      "family": "multilink",
+      "mode_label": "Holonomic",
+      "stage": "Pose snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "1f7da99d8e1103365138.npz",
+      "mode": "hard",
+      "checkpoint_epoch": 449,
+      "source_sha256": "865a39f038138060d2629b5407e0b74cb38e05ffc9d27f2cff01431587d4aff7",
+      "weights_sha256": "87b33461e981d148992c534c1d9582cebb003395ded56843128dd9c5c841e16c",
+      "variant_file": "71cddce8c9c915fd3b63.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pretrain.pt",
+      "label": "Holonomic \u00b7 Configuration \u00b7 Pretrain snapshot",
+      "family": "multilink",
+      "mode_label": "Holonomic",
+      "stage": "Pretrain snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "1c71becd83856cc8d394.npz",
+      "mode": "hard",
+      "checkpoint_epoch": 249,
+      "source_sha256": "5ef61071d031f25f0d66c14cff6cd14cf6045ce02b330e9ac9fa7dd56ad3e86a",
+      "weights_sha256": "eab7c18a22760440949eec12d06df677b620042cb10a0f080287772bba7884e8",
+      "variant_file": "71cddce8c9c915fd3b63.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_shape.pt",
+      "label": "Holonomic \u00b7 Configuration \u00b7 Shape snapshot",
+      "family": "multilink",
+      "mode_label": "Holonomic",
+      "stage": "Shape snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "b68a38f32d8cd9219da7.npz",
+      "mode": "hard",
+      "checkpoint_epoch": 449,
+      "source_sha256": "225bcffe9b1f2a83cbd19bab1e5b9f3f76a3ae0c7389410d0797d1d3cf132152",
+      "weights_sha256": "d8860505aef1bf60124ed065950f1d6c9b88c20236bd678f84846cf66cd37879",
+      "variant_file": "71cddce8c9c915fd3b63.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/hard_ood/model_hard_transfer.pt",
+      "label": "Holonomic \u00b7 Configuration \u00b7 Hard transfer",
+      "family": "multilink",
+      "mode_label": "Holonomic",
+      "stage": "Hard transfer",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "3ccd9e44410e07a7acbb.npz",
+      "mode": "hard",
+      "checkpoint_epoch": null,
+      "source_sha256": "741783baf7278e1116c485aac92da6ccdb44afc94e0e0892c05e5b3b149688dd",
+      "weights_sha256": "10e3b8ed7c3c3313844d583e8f7718715f7ff6b7c14b3e3877fd663e559ccd89",
+      "variant_file": "71cddce8c9c915fd3b63.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model.pt",
+      "label": "Holonomic \u00b7 Configuration \u00b7 Final",
+      "family": "multilink",
+      "mode_label": "Holonomic",
+      "stage": "Final",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "2c96f070f11dc5b8f949.npz",
+      "mode": "hard",
+      "checkpoint_epoch": null,
+      "source_sha256": "1b62d9c2ff1614b9bf7e255a2e2d4e78eab66998797f4104e67cc7b742348e31",
+      "weights_sha256": "0a5f359c7401d7e22165e57e4f8f344a8fefb507bb1c9868f5bf68e154f6deb9",
+      "variant_file": "71cddce8c9c915fd3b63.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model_shape_only.pt",
+      "label": "Holonomic \u00b7 Configuration \u00b7 Shape only",
+      "family": "multilink",
+      "mode_label": "Holonomic",
+      "stage": "Shape only",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "d23e0638d8c089bd9cb3.npz",
+      "mode": "hard",
+      "checkpoint_epoch": null,
+      "source_sha256": "3ed6e655bca41a00a1330d16eece1529a00fc816e8d650ecb36e661237da6e6d",
+      "weights_sha256": "9053023d3cea186dcdd01ca6b1c305b7e5c6ee8eb6eeaf14df57c1902a744554",
+      "variant_file": "71cddce8c9c915fd3b63.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pose.pt",
+      "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Pose snapshot",
+      "family": "multilink",
+      "mode_label": "FIM",
+      "stage": "Pose snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.15,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "a9ffd64fcce5c9aa956b.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": 449,
+      "source_sha256": "ff145844625aa54291c251a4ca9452a08c903d2de6c98513ab7acabe73e524f7",
+      "weights_sha256": "c1550351643077241fed35b69060ad3350aa99a71475dfe9370824370cd7c9b6",
+      "variant_file": "71b71ffeac7ce28155e3.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pretrain.pt",
+      "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Pretrain snapshot",
+      "family": "multilink",
+      "mode_label": "FIM",
+      "stage": "Pretrain snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.15,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "8b79145f761f8c85cf32.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": 249,
+      "source_sha256": "631ce3842d58c22a648aef670603c5e0f4ee5c1c652182d0bc420fd4afef6d8b",
+      "weights_sha256": "902640753d3392acc44e996fab30276a447220edc593a90c7d09ee6f462f7d42",
+      "variant_file": "71b71ffeac7ce28155e3.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_shape.pt",
+      "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Shape snapshot",
+      "family": "multilink",
+      "mode_label": "FIM",
+      "stage": "Shape snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.15,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "e2a79caddd58f1823205.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": 449,
+      "source_sha256": "662e994e9327095c878a5d4cb247ddaf0b8f1362e6ca49de78410f079578eac7",
+      "weights_sha256": "983a60ff610fa54a70aa3d84c744d4d5efc37506125c48bca9cf35c463d2532b",
+      "variant_file": "71b71ffeac7ce28155e3.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/hard_ood/model_hard_transfer.pt",
+      "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Hard transfer",
+      "family": "multilink",
+      "mode_label": "FIM",
+      "stage": "Hard transfer",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.15,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "e7ec99364ecd648ceb20.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "e7cb46a0c734b3dc6a92f77de2cde8d498121d5e14f0402145e97784d80304fb",
+      "weights_sha256": "872a07340ab886ac92fcf28eba230545d3dc9f59273e74b7d2f67df270469f8c",
+      "variant_file": "71b71ffeac7ce28155e3.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model.pt",
+      "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Final",
+      "family": "multilink",
+      "mode_label": "FIM",
+      "stage": "Final",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.15,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "8e73751ac80bc24b46ed.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "2e0a6f9061884be6a249c28abe80431af1a72bfbb08be914473edbb0536ec7c8",
+      "weights_sha256": "8511cab0ffb604bf55190e46cd92f036c65ba66c7c6ca2a12192b41baff66cf8",
+      "variant_file": "71b71ffeac7ce28155e3.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model_shape_only.pt",
+      "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Shape only",
+      "family": "multilink",
+      "mode_label": "FIM",
+      "stage": "Shape only",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.15,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "d57645955c4638a73034.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "669c95c366e6d9a23e269f50c1c2eafd6bce3a8421fb753fcd3980216951875a",
+      "weights_sha256": "84c1ea2763b8a931df7296a1f5ce51b2b6a15922b134539843c95eaefa7c5aa5",
+      "variant_file": "71b71ffeac7ce28155e3.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pose.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Pose snapshot",
+      "family": "multilink",
+      "mode_label": "Open",
+      "stage": "Pose snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "63db9561b15cd687d8ca.npz",
+      "mode": "open",
+      "checkpoint_epoch": 449,
+      "source_sha256": "5809245cf2c26535fa6d7435a393001da94068264a6135ed927143dbb891fa1c",
+      "weights_sha256": "a5c8c320cfc8dd1373abf7f5b6d8db63c362aab9a1f5c8340929dbb38422cb2b",
+      "variant_file": "ee39a66734dc62642e4b.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pretrain.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Pretrain snapshot",
+      "family": "multilink",
+      "mode_label": "Open",
+      "stage": "Pretrain snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "cb2f3cd9181f21d4f11b.npz",
+      "mode": "open",
+      "checkpoint_epoch": 249,
+      "source_sha256": "f61f3c542d2dcf2c89cbc4c85964014d5676b921d0ed58f4f509116ca2a06c06",
+      "weights_sha256": "c33e561a9f687211d35c5c6dbefc546e1ca9bf1fffe619b13ec830f97e7b3527",
+      "variant_file": "ee39a66734dc62642e4b.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/open/checkpoint_shape.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Shape snapshot",
+      "family": "multilink",
+      "mode_label": "Open",
+      "stage": "Shape snapshot",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "59b2a607f1ce0887dcd2.npz",
+      "mode": "open",
+      "checkpoint_epoch": 449,
+      "source_sha256": "a65a8067da360edfae4c8872f567fad01c2deb013ce2ce8856148b4469e18a39",
+      "weights_sha256": "e42858f58afc302e0eb0babf71fcee9ccaf540c1a6424b930ce3dd6e35d36f4e",
+      "variant_file": "ee39a66734dc62642e4b.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/open/hard_ood/model_hard_transfer.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Hard transfer",
+      "family": "multilink",
+      "mode_label": "Open",
+      "stage": "Hard transfer",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "e39cf60f2545af285a27.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "d19bef881381dd865d030198267b5b0be328a8acd68d6fa165d70413f3143f52",
+      "weights_sha256": "8d47f5ffb391684ce9ed2938bdbe2579689c43f46d327018debfc535ef593d75",
+      "variant_file": "ee39a66734dc62642e4b.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/open/model.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Final",
+      "family": "multilink",
+      "mode_label": "Open",
+      "stage": "Final",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "ae4f82e81c413ee64cc1.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "3ced03654102b630d6bd58c6bcf45d0a23904a1baf92933ac8189265d5ec2fe7",
+      "weights_sha256": "0a2e203060056c8d986eda91308e2d37ac40186f92d644c48c5a947ec0224a60",
+      "variant_file": "ee39a66734dc62642e4b.json.gz"
+    },
+    {
+      "id": "multilink_shared_circle_crescent_v35_again/open/model_shape_only.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Shape only",
+      "family": "multilink",
+      "mode_label": "Open",
+      "stage": "Shape only",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 56,
+        "tolerance": 0.05,
+        "fim": true
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "1c493e89938cb6fa408d.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "2ac24dc2f4118d57426d773f37e1e1a7cb0b50733080e068326f4fbeaa733f54",
+      "weights_sha256": "ff904d9206fa46bbc8f46cf7573fdca00cd34b3dc44cb228e3573a4893562294",
+      "variant_file": "ee39a66734dc62642e4b.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p020_cfg/hard_ood/model_transfer.pt",
+      "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Configuration \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Hard transfer",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.02,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "05ddf25326df7b0bffb1.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "c09f16dc179b029eb671330c62184fc400f4484b1d6bed56965b0de435fd6b58",
+      "weights_sha256": "ced0a705de71cd6165846890720a339f5b324bc4055cc062bae890c0ab002fae",
+      "variant_file": "28051a8b455f53056736.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p020_cfg/model.pt",
+      "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Configuration \u00b7 Final",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Final",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.02,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "e59f5463b0199d607e55.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "b98aa0704985bfe83ac89e69a119b3a80909755226fff2d9128027e844645ecf",
+      "weights_sha256": "dcf9355baec51b6404a14834d92630870b063416460b946b780ffdc34b84f3c6",
+      "variant_file": "28051a8b455f53056736.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p020_cfg/model_pretrained.pt",
+      "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Configuration \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Pretrained",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.02,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "9c50348d8f8e1aaffa87.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "76992d5669aa0cc95916fbf1aaeffb57d2b8cfb724ad707c3279077803290dc2",
+      "weights_sha256": "6c0043beb8a0bcbf837b84804ea60e8ef9df36553993a73a6663e4fc33b5ff37",
+      "variant_file": "28051a8b455f53056736.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p020_cfg/model_stage1.pt",
+      "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Configuration \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Stage 1",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.02,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "8a2d94d26bc97226fdd3.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "04a02e3bbe19b8da0c75c8d78096ada6e2619f371dccbdc0991b4737409ce3ee",
+      "weights_sha256": "627586683e598787da0e5afed56faa8e3054b9dcd0a294ae4f1563cf46930e65",
+      "variant_file": "28051a8b455f53056736.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p020_obs/hard_ood/model_transfer.pt",
+      "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Observation \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Hard transfer",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.02,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "2af0ccedb685ad168f68.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "940d4a04ac0abbc7177afbca0f4f85bb7e76f182cedc36808f5663996c029e8f",
+      "weights_sha256": "8195b91c25d54db589dd396f7d0bd60d1938921f66f06c9f274a5615c7a0170b",
+      "variant_file": "fe135a2c318ed41fb470.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p020_obs/model.pt",
+      "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Observation \u00b7 Final",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Final",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.02,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "ed792a7af5a807d8fed3.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "8e73d6d2c99601015e51dcbe1f60ad784125dd84984aa19039f7a9c8c781814b",
+      "weights_sha256": "358ea2d80c135cdbba01973a61b2a6b45a2384289152ab1a7924c901c55160d1",
+      "variant_file": "fe135a2c318ed41fb470.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p020_obs/model_pretrained.pt",
+      "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Observation \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Pretrained",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.02,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "4c87d207b307e8309c1c.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "11dd013e369e60662a682f4b61af1f1bb133a24baf6955e1545b692d783742c8",
+      "weights_sha256": "f8dc93990208a9f88ba1a28e2be841168003452b1b03d4d58a45416cc172848d",
+      "variant_file": "fe135a2c318ed41fb470.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p020_obs/model_stage1.pt",
+      "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Observation \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Stage 1",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.02,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "2c1f46b495992bbaf720.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "ad0b331427429d3bbb7af0ca7eb2ff126065f356bb1bd59fd9a6a58088be3017",
+      "weights_sha256": "e72ce284b2e370db747be30d9f5fae7f5f6f780ccb5740b246306b198c63e636",
+      "variant_file": "fe135a2c318ed41fb470.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p050_cfg/hard_ood/model_transfer.pt",
+      "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Configuration \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Hard transfer",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.05,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "198cff9e6451b14c2a16.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "0011973f20ceadbccb8d935212fa770a3a6ac63186c0406d08e38046918baed7",
+      "weights_sha256": "f3713e34024be4760e6f8131ec1bbf2d1fb95aa1098028c6246d8c7b3f1475f0",
+      "variant_file": "f242a4b46486fbe012bd.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p050_cfg/model.pt",
+      "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Configuration \u00b7 Final",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Final",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.05,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "03fb3f597a4188266656.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "e3bf241ea6cc35d88d7fe105ffcd1ea7c6807e35a876baea5e718603a0694859",
+      "weights_sha256": "ee51c44904fde402deb817258dc78bf70503d950e11cd03ab97b43fdff4b203e",
+      "variant_file": "f242a4b46486fbe012bd.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p050_cfg/model_pretrained.pt",
+      "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Configuration \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Pretrained",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.05,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "0e4fa94d29430e59bfc9.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "69f283cd3dd7e05d99773a9cd710ffad4bffbdc9ef25b38d2329271fc645331f",
+      "weights_sha256": "d1d0792e2fbecb2fb3af4509001e498332a634ac6eafa6912a1f8e88954784f9",
+      "variant_file": "f242a4b46486fbe012bd.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p050_cfg/model_stage1.pt",
+      "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Configuration \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Stage 1",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.05,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "f1f69b99a7d388d5427c.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "6cca0e0b4c3d049a6399c217dde8ebfd2826b8007a013b5bce717971240a3672",
+      "weights_sha256": "8d89e5cf1cdd75af09cb46deba5fc0edd9ba6eefd2e09dd70c5488752afe367b",
+      "variant_file": "f242a4b46486fbe012bd.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p050_obs/hard_ood/model_transfer.pt",
+      "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Observation \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Hard transfer",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.05,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "3ea8247fe1d39d3138b4.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "5581a1704a45957d1dbbc20e2a10b20bfaf842270cc7a3029c686bf0457d77cf",
+      "weights_sha256": "661b4bb47f1d78946c2be4d70e3d3412a5ca8b889b1c6108537eee1d7276f5a2",
+      "variant_file": "fe293c242741407c5370.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p050_obs/model.pt",
+      "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Observation \u00b7 Final",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Final",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.05,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "982010665f7f06d3a64b.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "eabdb50d5bee7cfbbf2f990729fca2cbc5eea9407ea02df35fb935de7d827993",
+      "weights_sha256": "f90561d1c318bcd0a16406d872394e858f458417eaf5c96a59c237c5f4b9cffd",
+      "variant_file": "fe293c242741407c5370.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p050_obs/model_pretrained.pt",
+      "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Observation \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Pretrained",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.05,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "18e8ffcfcb29d87318d4.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "2572db18971ec133df5868f17c178910cd937883dcc0441d4d0042c160236e61",
+      "weights_sha256": "56ade861e15865c14a8d4118ed38e5a916125f80e64dad614537dc9bcebd0fbc",
+      "variant_file": "fe293c242741407c5370.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p050_obs/model_stage1.pt",
+      "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Observation \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Stage 1",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.05,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "1d722d715a95c7116e1d.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "0513d24e111cc8709108cb37c347e588f19bbbd342265f1f96131a966c4a2c7c",
+      "weights_sha256": "7e8c133d46260a67cb185f3a56602b6aec3e9877873eeb849e7fa3d78f61c05f",
+      "variant_file": "fe293c242741407c5370.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p100_cfg/hard_ood/model_transfer.pt",
+      "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Configuration \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Hard transfer",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.1,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "c2d4e749ca608b046a76.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "a637298102e71e61a0fa374d302e3f78aa92a6bc4033fca2e3bb8109ae2064be",
+      "weights_sha256": "72d54ef334218356d1984130c48e7d0d2a25ab1ebfe1dfed89014ff596324cb4",
+      "variant_file": "6cd84d6eb98f33196032.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p100_cfg/model.pt",
+      "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Configuration \u00b7 Final",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Final",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.1,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "a6ed91a0c9c189b88cc2.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "83898e6529b44bea600dd8332254cf95024a745dda0117b8f578fdad53f57c66",
+      "weights_sha256": "bcebc6b8832596bb236d4f281d41358d3e14b66825746199ef9fa4528f255243",
+      "variant_file": "6cd84d6eb98f33196032.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p100_cfg/model_pretrained.pt",
+      "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Configuration \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Pretrained",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.1,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "b4b72db11131607084a9.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "17941a6060b03e5900043a1a2846f522f798a343d3799e423d87337d36d62c9f",
+      "weights_sha256": "09090ae1d8b55b0ae6ba5cd46d2680706d4a95e321efecf814ac5d31394a4ec8",
+      "variant_file": "6cd84d6eb98f33196032.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p100_cfg/model_stage1.pt",
+      "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Configuration \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Stage 1",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.1,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "f5287dd0095e8c1dc4ea.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "ffa5761389e70033b605998dd1e11ba747c68f9de04ffb82a409aae7730761b0",
+      "weights_sha256": "db873fba8e093a8c26f91245d99b31938dd97ae4953992c098a408b8883ff0d8",
+      "variant_file": "6cd84d6eb98f33196032.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p100_obs/hard_ood/model_transfer.pt",
+      "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Observation \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Hard transfer",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.1,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "09d26ebf8e00ce394f3e.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "c1c3cef0fdbf57ff768755b7afba650dd357d24582fac5d808c335cc669bdf40",
+      "weights_sha256": "2fc1529da98884fff15ccac3ca532150d227068e97699af3cd4524689bf8ff60",
+      "variant_file": "341614bcbcfad5854fb5.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p100_obs/model.pt",
+      "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Observation \u00b7 Final",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Final",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.1,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "2b429fad7d7085807cb2.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "8a5753c973dac20f8b648110fc622a21d3e5ca820d1c36f014ab3cf93997aad9",
+      "weights_sha256": "a838f733101b32ed16d8a9250259d1fa056119908827268bc6f4ac23080eace7",
+      "variant_file": "341614bcbcfad5854fb5.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p100_obs/model_pretrained.pt",
+      "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Observation \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Pretrained",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.1,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "5dee5776cdf6ccf52e65.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "98a5d14eb1cb41178efaee97b8fcb911d22d6ad18800c17cc8258b9a1a431819",
+      "weights_sha256": "30e284b3efdf865d7799d8c41893747868788c216b6c702d355602f63d8abfc4",
+      "variant_file": "341614bcbcfad5854fb5.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/measurement_0p100_obs/model_stage1.pt",
+      "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Observation \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "FIM",
+      "stage": "Stage 1",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.1,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "f3e9fa3ef9e0190a52e3.npz",
+      "mode": "measurement",
+      "checkpoint_epoch": null,
+      "source_sha256": "a7e82a4b736d46403dd0e172d4ff7163d3b083fa740ebbf327f5d4586db24b23",
+      "weights_sha256": "fa3755da9c29e0e5f5c28a3975bb8a5c0af934fde283ec045cbe97bc81697b24",
+      "variant_file": "341614bcbcfad5854fb5.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/open_cfg/hard_ood/model_transfer.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "Open",
+      "stage": "Hard transfer",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "493e78538941fc3c85ea.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "c55ff58f93e4ce2abcbb98119da5e5507c867691730e6b7172418050cea3ad3f",
+      "weights_sha256": "3e8a779f793c6d5ff6d17b23f7e28c156035b5ed2a63e58359baec5e2aed8def",
+      "variant_file": "7368e3ad4eb5591cdfe6.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/open_cfg/model.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Final",
+      "family": "spline",
+      "mode_label": "Open",
+      "stage": "Final",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "f9c3dc95888fcd2c97d6.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "0f7972c40ee8f410f666e702bb8808b230cf6d6824edf35dcb014b441f9e306c",
+      "weights_sha256": "cb6a9499ebceca4f5bdaf3bbbd3a77c4261abf34fee4652a5c555a10dca2ab7d",
+      "variant_file": "7368e3ad4eb5591cdfe6.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/open_cfg/model_pretrained.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "Open",
+      "stage": "Pretrained",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "a696076e1b152e728833.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "2b2843604fe537ec4aab4a690fe7fbec424489804202f19db5e108e668c38e14",
+      "weights_sha256": "77b30e0d6e714544538327bfadaf7ec7a845b44dd8e9ce80fe19671ec8b54841",
+      "variant_file": "7368e3ad4eb5591cdfe6.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/open_cfg/model_stage1.pt",
+      "label": "Open \u00b7 Configuration \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "Open",
+      "stage": "Stage 1",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "a9ba15e35016589fc3bb.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "269f71fb2ec3c40b58bba509882660099bfc0f7c45fc151923233e5dd79a89ea",
+      "weights_sha256": "b008376de7a75a8ca5e425afc36ef6a97288736142e566510d3920e0b5ccaa12",
+      "variant_file": "7368e3ad4eb5591cdfe6.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/open_obs/hard_ood/model_transfer.pt",
+      "label": "Open \u00b7 Observation \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "Open",
+      "stage": "Hard transfer",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "410d0dacd0b9769a30ea.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "4f9282e8ccea332aa4d1e799fe4066f2a5eee82b549ccb304f79a807c4c61878",
+      "weights_sha256": "15547ad66fe1cc9dde64a56f5c8c98f74d5a173378863aa1620756fc5b1d4d92",
+      "variant_file": "6fc2aa6a6bd3f6b2164a.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/open_obs/model.pt",
+      "label": "Open \u00b7 Observation \u00b7 Final",
+      "family": "spline",
+      "mode_label": "Open",
+      "stage": "Final",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "1b88910a09c71816ccd7.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "aa65287b5f3d8249f47a68aa0e642c521b0f5052a82d83cab2375b4f8f9cf37b",
+      "weights_sha256": "cc48a6be6427f86603b51e7754469ba1553c97860496c649bf0885e1e2d0b2d6",
+      "variant_file": "6fc2aa6a6bd3f6b2164a.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/open_obs/model_pretrained.pt",
+      "label": "Open \u00b7 Observation \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "Open",
+      "stage": "Pretrained",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "72e562be9f8c5234a406.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "4d243eea34f7473ba44a9fe23aa99b8cd52a38e5beba317a87be7ff5786c2ba2",
+      "weights_sha256": "d65750b88831cc87f851b201338073be05e375bf6fc20bc87e5b8fd3a38e2e79",
+      "variant_file": "6fc2aa6a6bd3f6b2164a.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/open_obs/model_stage1.pt",
+      "label": "Open \u00b7 Observation \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "Open",
+      "stage": "Stage 1",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "c3713c7cb42aaab6df9f.npz",
+      "mode": "open",
+      "checkpoint_epoch": null,
+      "source_sha256": "d565307a71c1aacb53c2ce237afbe6aaeacfef9e6b394b738e3bdd9708959c39",
+      "weights_sha256": "ea1f569a9913d049db10117018559f1478e25cc5310f7e624d04f79d3cfb20bb",
+      "variant_file": "6fc2aa6a6bd3f6b2164a.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/periodic_cfg/hard_ood/model_transfer.pt",
+      "label": "Periodic \u00b7 Configuration \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "Periodic",
+      "stage": "Hard transfer",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "457c95d689401c4c07bf.npz",
+      "mode": "periodic",
+      "checkpoint_epoch": null,
+      "source_sha256": "edb291502427adbcd657aafc3eaf04f5bb3bad656935e9ef100247028c4402cc",
+      "weights_sha256": "9ba91ffd081eda3b1190d640252dc23320a2c0ed9e3dfdd67d5250aef44c8101",
+      "variant_file": "5914fbc0bf1a21513c0e.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/periodic_cfg/model.pt",
+      "label": "Periodic \u00b7 Configuration \u00b7 Final",
+      "family": "spline",
+      "mode_label": "Periodic",
+      "stage": "Final",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "6f06fe0bfcf77e17083d.npz",
+      "mode": "periodic",
+      "checkpoint_epoch": null,
+      "source_sha256": "90834c1f3b9253cbeacce625a76ea59d1ad23c79810417fb043749a01e3b3f60",
+      "weights_sha256": "5af780d563213c56393a92d9a5389af38361fa0c34f66d0a37fb6894a116e7b9",
+      "variant_file": "5914fbc0bf1a21513c0e.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/periodic_cfg/model_pretrained.pt",
+      "label": "Periodic \u00b7 Configuration \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "Periodic",
+      "stage": "Pretrained",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "2ef6f6143d2417909e8a.npz",
+      "mode": "periodic",
+      "checkpoint_epoch": null,
+      "source_sha256": "27afe01623a706571c563e5b7e632aa820da27c575bb7dce82cd0ad37c5aa688",
+      "weights_sha256": "943ac61816376d48df5bfd33abbb4718be918a0163a6238707cf6b96788cef3a",
+      "variant_file": "5914fbc0bf1a21513c0e.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/periodic_cfg/model_stage1.pt",
+      "label": "Periodic \u00b7 Configuration \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "Periodic",
+      "stage": "Stage 1",
+      "conditioning": "configuration",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "bf4466d6dc6c91718ac4.npz",
+      "mode": "periodic",
+      "checkpoint_epoch": null,
+      "source_sha256": "62c836debce81e52a70312f2b7c8223f6b9e782a81bc45317988157098cdf343",
+      "weights_sha256": "e5f0d464cfd81a2aec02b0990388a426a112a63df1b8aba955151e9c73092636",
+      "variant_file": "5914fbc0bf1a21513c0e.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/periodic_obs/hard_ood/model_transfer.pt",
+      "label": "Periodic \u00b7 Observation \u00b7 Hard transfer",
+      "family": "spline",
+      "mode_label": "Periodic",
+      "stage": "Hard transfer",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "bb0eb4a7a25bb1d451d8.npz",
+      "mode": "periodic",
+      "checkpoint_epoch": null,
+      "source_sha256": "4a831614eb31b38a0e3fde0e956eef03de957c3d5c4c8aae71f4f0d418f1d9ca",
+      "weights_sha256": "9781f2f8bebeee05dd6b0b9b1280abee384b4b70acc78514af0b28141b890eb5",
+      "variant_file": "26c264d67d95c679c7bc.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/periodic_obs/model.pt",
+      "label": "Periodic \u00b7 Observation \u00b7 Final",
+      "family": "spline",
+      "mode_label": "Periodic",
+      "stage": "Final",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "93fe7d3c9789f1cf47bf.npz",
+      "mode": "periodic",
+      "checkpoint_epoch": null,
+      "source_sha256": "81682cdc5b90fd2cb3aaada86e54f4ad50b67ec95350a1cfed14e6a726049031",
+      "weights_sha256": "ad875b8f325719d6e11a73daa6b6073482bd6971f88b0987d6b9d17315d42dba",
+      "variant_file": "26c264d67d95c679c7bc.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/periodic_obs/model_pretrained.pt",
+      "label": "Periodic \u00b7 Observation \u00b7 Pretrained",
+      "family": "spline",
+      "mode_label": "Periodic",
+      "stage": "Pretrained",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "8aa52849e9d4438abbbf.npz",
+      "mode": "periodic",
+      "checkpoint_epoch": null,
+      "source_sha256": "2d1e8b17724b07b70ca93d58027559f525cd0c7c321236fce76fb5b08bf0fa60",
+      "weights_sha256": "5c6845f397fdc34afe0b27332d162476a2c91ded59b2577c0f3e974f21ba4fc7",
+      "variant_file": "26c264d67d95c679c7bc.json.gz"
+    },
+    {
+      "id": "spline_curve_ablation_v34/periodic_obs/model_stage1.pt",
+      "label": "Periodic \u00b7 Observation \u00b7 Stage 1",
+      "family": "spline",
+      "mode_label": "Periodic",
+      "stage": "Stage 1",
+      "conditioning": "observation",
+      "defaults": {
+        "steps": 30,
+        "tolerance": 0.04,
+        "fim": false
+      },
+      "tasks": {
+        "train_stage1": 18,
+        "val_stage1": 4,
+        "train_stage2": 18,
+        "val_stage2": 4,
+        "test": 5,
+        "hard_adapt": 4,
+        "hard_test": 5
+      },
+      "weights_file": "cb49e178e64533d13dd8.npz",
+      "mode": "periodic",
+      "checkpoint_epoch": null,
+      "source_sha256": "8567f756505a267355f147a76bc0575ceb642d400fd847031d9fdb6bdc3958dd",
+      "weights_sha256": "5453ea8753abb0ad98b52259f039f3cef2c14ce639a6b3cf9d04142b36d3cadf",
+      "variant_file": "26c264d67d95c679c7bc.json.gz"
+    }
+  ],
+  "count": 58,
+  "runtime": "numpy-float64",
+  "variants": 13
+}

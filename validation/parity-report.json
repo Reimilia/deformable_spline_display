@@ -1,0 +1,313 @@
+{
+  "reference": "original PyTorch engine",
+  "cases": 73,
+  "checkpoints": 58,
+  "max_absolute_error": 1.828937001846498e-11,
+  "results": [
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pose.pt",
+      "max_absolute_error": 1.828937001846498e-11
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pretrain.pt",
+      "max_absolute_error": 9.14823772291129e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_shape.pt",
+      "max_absolute_error": 8.419931418757187e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/hard_ood/model_hard_transfer.pt",
+      "max_absolute_error": 2.396305376350938e-12
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model.pt",
+      "max_absolute_error": 7.864819906444609e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model_shape_only.pt",
+      "max_absolute_error": 6.883382752675971e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pose.pt",
+      "max_absolute_error": 8.335554468885675e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pretrain.pt",
+      "max_absolute_error": 6.612488334667432e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_shape.pt",
+      "max_absolute_error": 1.1359801987964602e-12
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/hard_ood/model_hard_transfer.pt",
+      "max_absolute_error": 9.29034627006331e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model.pt",
+      "max_absolute_error": 4.760636329592671e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model_shape_only.pt",
+      "max_absolute_error": 1.248334768888526e-12
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pose.pt",
+      "max_absolute_error": 6.368239269249898e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pretrain.pt",
+      "max_absolute_error": 4.725109192804666e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_shape.pt",
+      "max_absolute_error": 1.3038459201197838e-12
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/hard_ood/model_hard_transfer.pt",
+      "max_absolute_error": 1.4441781104324036e-12
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/model.pt",
+      "max_absolute_error": 1.0553780072086738e-12
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/model_shape_only.pt",
+      "max_absolute_error": 2.077005234468743e-12
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/hard_ood/model_transfer.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model_pretrained.pt",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model_stage1.pt",
+      "max_absolute_error": 2.6645352591003757e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/hard_ood/model_transfer.pt",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model_pretrained.pt",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model_stage1.pt",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/hard_ood/model_transfer.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model.pt",
+      "max_absolute_error": 3.58046925441613e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model_pretrained.pt",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model_stage1.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/hard_ood/model_transfer.pt",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model.pt",
+      "max_absolute_error": 3.0531133177191805e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model_pretrained.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model_stage1.pt",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/hard_ood/model_transfer.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model_pretrained.pt",
+      "max_absolute_error": 3.608224830031759e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model_stage1.pt",
+      "max_absolute_error": 2.6645352591003757e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/hard_ood/model_transfer.pt",
+      "max_absolute_error": 3.9968028886505635e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model_pretrained.pt",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model_stage1.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/hard_ood/model_transfer.pt",
+      "max_absolute_error": 7.105427357601002e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model.pt",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model_pretrained.pt",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model_stage1.pt",
+      "max_absolute_error": 3.913536161803677e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/hard_ood/model_transfer.pt",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model_pretrained.pt",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model_stage1.pt",
+      "max_absolute_error": 3.9968028886505635e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/hard_ood/model_transfer.pt",
+      "max_absolute_error": 4.08006961549745e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model_pretrained.pt",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model_stage1.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/hard_ood/model_transfer.pt",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model.pt",
+      "max_absolute_error": 2.7200464103316335e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model_pretrained.pt",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model_stage1.pt",
+      "max_absolute_error": 3.552713678800501e-15
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 6.87894186057747e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 5.075939668586216e-13
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 6.066258606551855e-13
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 3.7192471324942744e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 5.329070518200751e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 3.7192471324942744e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 3.7192471324942744e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 3.7192471324942744e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 4.440892098500626e-15
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model.pt",
+      "case": "changed controls",
+      "max_absolute_error": 4.565792188770956e-15
+    },
+    {
+      "case": "multilink comparison",
+      "max_absolute_error": 8.490985692333197e-13
+    },
+    {
+      "case": "spline comparison",
+      "max_absolute_error": 4.440892098500626e-15
+    }
+  ]
+}

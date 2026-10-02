@@ -1,0 +1,14 @@
+{
+  "all_passed": true,
+  "checkpoints": 58,
+  "deployment_prefix": "/",
+  "api_requests": 0,
+  "external_requests": 0,
+  "changed_configuration": true,
+  "comparison": true,
+  "hard_ood": true,
+  "observation_noise": true,
+  "cancellation_and_retry": true,
+  "desktop_and_mobile": true,
+  "requests": 33
+}
