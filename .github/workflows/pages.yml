@@ -1,0 +1,81 @@
+name: Publish deformation demo to GitHub Pages
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      refresh_previews:
+        description: Regenerate saved rollouts from the checkpoint files before publishing
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Publish the repository's default branch, or a manually selected branch.
+    if: github.event_name == 'workflow_dispatch' || github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: racket_viz/app
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: racket_viz/app/package-lock.json
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Set up Python for optional preview refresh
+        if: github.event_name == 'workflow_dispatch' && inputs.refresh_previews
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Refresh saved checkpoint previews
+        if: github.event_name == 'workflow_dispatch' && inputs.refresh_previews
+        working-directory: .
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r racket_viz/multilink_backend/requirements.txt
+          python racket_viz/multilink_backend/export_previews.py
+      - name: Validate preview data and test frontend
+        run: |
+          npm run validate:previews
+          npm test
+      - name: Build frontend
+        env:
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          VITE_STATIC_DEMO: 'true'
+          # Optional Actions repository variable: HTTPS origin of a live service.
+          VITE_API_URL: ${{ vars.DEMO_API_URL }}
+        run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: racket_viz/app/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5

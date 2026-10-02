@@ -1,0 +1,21 @@
+{
+  "name": "racket-viz",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "validate:previews": "node scripts/validate-previews.mjs"
+  },
+  "dependencies": {
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0",
+    "jsdom": "^25.0.0"
+  }
+}

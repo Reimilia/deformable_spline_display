@@ -1,0 +1,14 @@
+[
+  ["nn_ode",
+   "ph_nn_ode_v2/data/run_wp3d_fp32/obs0p5_fric0p5_wind0_ext0-sine_lP0_lV0_lB0_lD0_lr0p001_s10000_np5_smp64_T20_rk4_seed0_fixM_260504-232953",
+   "nn_ode_old"],
+  ["nn_ode",
+   "ph_nn_ode_v2/data/run_wp3d_fp32/obs0p5_fric0p5_wind0_ext0-sine_lP0p5_lV0p5_lB0p5_lD0p5_lr0p001_s10000_np5_smp64_T20_rk4_seed0_fixM_260504-230839",
+   "nn_ode_new"],
+  ["gp_ode",
+   "ph_gp_ode_v2/data/run_wp3d_jax/obs0p5_fric0p5_wind0_ext0-sine_lP0_lV0_lB0_lD0_lr0p001_s10000_np5_smp64_T20_seed0_w_fixM_260505-154949",
+   "gp_ode_old"],
+  ["gp_ode",
+   "ph_gp_ode_v2/data/run_wp3d_jax/obs0p5_fric0p5_wind0_ext0-sine_lP0p5_lV0p5_lB0p5_lD0p5_lr0p001_s10000_np5_smp64_T20_seed0_w_fixM_260505-154852",
+   "gp_ode_new"]
+]

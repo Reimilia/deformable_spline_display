@@ -1,0 +1,11 @@
+{
+  "checkpoints": 58,
+  "desktop": true,
+  "mobile": true,
+  "overlay": true,
+  "noise": true,
+  "scrubbing": true,
+  "json_export": true,
+  "invalid_request": true,
+  "page_errors": []
+}

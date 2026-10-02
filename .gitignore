@@ -1,35 +1,19 @@
-# Development & build
-node_modules/
-.venv/
-__pycache__/
+*.tar
+*.eqx
+*.pdf
+*.ipynb
+*.mp4
+*.avi
 *.pyc
-.pytest_cache/
-dist/
-build/
-*.egg-info/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-
-# Runtime & temp files
-.runtime/
-*.log
-temp/
-tmp/
-
-# Python
-venv/
-env/
-.env
-
-# Build outputs
-/site/
-/out/
-
-# OS
-Thumbs.db
+*.pth
+*.txt
+*.sh
+*.pdf
+*.png
+*.pkl
+__pycache__/
+datasets/**/*.pkl
+envs/gym-pybullet-drones/
+results/
+stats/
+!racket_viz/multilink_backend/requirements.txt

@@ -1,0 +1,1871 @@
+{
+  "schema_version": 1,
+  "horizon": 2,
+  "catalog": {
+    "schema_version": 1,
+    "checkpoints": [
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pose.pt",
+        "label": "Holonomic \u00b7 Configuration \u00b7 Pose snapshot",
+        "family": "multilink",
+        "mode_label": "Holonomic",
+        "stage": "Pose snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/holonomic_hard"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pretrain.pt",
+        "label": "Holonomic \u00b7 Configuration \u00b7 Pretrain snapshot",
+        "family": "multilink",
+        "mode_label": "Holonomic",
+        "stage": "Pretrain snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/holonomic_hard"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_shape.pt",
+        "label": "Holonomic \u00b7 Configuration \u00b7 Shape snapshot",
+        "family": "multilink",
+        "mode_label": "Holonomic",
+        "stage": "Shape snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/holonomic_hard"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/hard_ood/model_hard_transfer.pt",
+        "label": "Holonomic \u00b7 Configuration \u00b7 Hard transfer",
+        "family": "multilink",
+        "mode_label": "Holonomic",
+        "stage": "Hard transfer",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/holonomic_hard"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model.pt",
+        "label": "Holonomic \u00b7 Configuration \u00b7 Final",
+        "family": "multilink",
+        "mode_label": "Holonomic",
+        "stage": "Final",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/holonomic_hard"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model_shape_only.pt",
+        "label": "Holonomic \u00b7 Configuration \u00b7 Shape only",
+        "family": "multilink",
+        "mode_label": "Holonomic",
+        "stage": "Shape only",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/holonomic_hard"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pose.pt",
+        "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Pose snapshot",
+        "family": "multilink",
+        "mode_label": "FIM",
+        "stage": "Pose snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.15,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pretrain.pt",
+        "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Pretrain snapshot",
+        "family": "multilink",
+        "mode_label": "FIM",
+        "stage": "Pretrain snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.15,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_shape.pt",
+        "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Shape snapshot",
+        "family": "multilink",
+        "mode_label": "FIM",
+        "stage": "Shape snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.15,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/hard_ood/model_hard_transfer.pt",
+        "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Hard transfer",
+        "family": "multilink",
+        "mode_label": "FIM",
+        "stage": "Hard transfer",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.15,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model.pt",
+        "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Final",
+        "family": "multilink",
+        "mode_label": "FIM",
+        "stage": "Final",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.15,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model_shape_only.pt",
+        "label": "FIM \u00b7 \u03b5=0.15 \u00b7 Configuration \u00b7 Shape only",
+        "family": "multilink",
+        "mode_label": "FIM",
+        "stage": "Shape only",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.15,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pose.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Pose snapshot",
+        "family": "multilink",
+        "mode_label": "Open",
+        "stage": "Pose snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/open"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pretrain.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Pretrain snapshot",
+        "family": "multilink",
+        "mode_label": "Open",
+        "stage": "Pretrain snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/open"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/open/checkpoint_shape.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Shape snapshot",
+        "family": "multilink",
+        "mode_label": "Open",
+        "stage": "Shape snapshot",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/open"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/open/hard_ood/model_hard_transfer.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Hard transfer",
+        "family": "multilink",
+        "mode_label": "Open",
+        "stage": "Hard transfer",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/open"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/open/model.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Final",
+        "family": "multilink",
+        "mode_label": "Open",
+        "stage": "Final",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/open"
+      },
+      {
+        "id": "multilink_shared_circle_crescent_v35_again/open/model_shape_only.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Shape only",
+        "family": "multilink",
+        "mode_label": "Open",
+        "stage": "Shape only",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 56,
+          "tolerance": 0.05,
+          "fim": true
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "multilink_shared_circle_crescent_v35_again/open"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p020_cfg/hard_ood/model_transfer.pt",
+        "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Configuration \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Hard transfer",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.02,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p020_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p020_cfg/model.pt",
+        "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Configuration \u00b7 Final",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Final",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.02,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p020_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p020_cfg/model_pretrained.pt",
+        "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Configuration \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Pretrained",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.02,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p020_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p020_cfg/model_stage1.pt",
+        "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Configuration \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Stage 1",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.02,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p020_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p020_obs/hard_ood/model_transfer.pt",
+        "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Observation \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Hard transfer",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.02,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p020_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p020_obs/model.pt",
+        "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Observation \u00b7 Final",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Final",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.02,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p020_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p020_obs/model_pretrained.pt",
+        "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Observation \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Pretrained",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.02,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p020_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p020_obs/model_stage1.pt",
+        "label": "FIM \u00b7 \u03b5=0.02 \u00b7 Observation \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Stage 1",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.02,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p020_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p050_cfg/hard_ood/model_transfer.pt",
+        "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Configuration \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Hard transfer",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.05,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p050_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p050_cfg/model.pt",
+        "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Configuration \u00b7 Final",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Final",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.05,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p050_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p050_cfg/model_pretrained.pt",
+        "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Configuration \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Pretrained",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.05,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p050_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p050_cfg/model_stage1.pt",
+        "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Configuration \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Stage 1",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.05,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p050_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p050_obs/hard_ood/model_transfer.pt",
+        "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Observation \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Hard transfer",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.05,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p050_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p050_obs/model.pt",
+        "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Observation \u00b7 Final",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Final",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.05,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p050_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p050_obs/model_pretrained.pt",
+        "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Observation \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Pretrained",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.05,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p050_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p050_obs/model_stage1.pt",
+        "label": "FIM \u00b7 \u03b5=0.05 \u00b7 Observation \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Stage 1",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.05,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p050_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p100_cfg/hard_ood/model_transfer.pt",
+        "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Configuration \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Hard transfer",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.1,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p100_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p100_cfg/model.pt",
+        "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Configuration \u00b7 Final",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Final",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.1,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p100_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p100_cfg/model_pretrained.pt",
+        "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Configuration \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Pretrained",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.1,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p100_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p100_cfg/model_stage1.pt",
+        "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Configuration \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Stage 1",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.1,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p100_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p100_obs/hard_ood/model_transfer.pt",
+        "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Observation \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Hard transfer",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.1,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p100_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p100_obs/model.pt",
+        "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Observation \u00b7 Final",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Final",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.1,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p100_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p100_obs/model_pretrained.pt",
+        "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Observation \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Pretrained",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.1,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p100_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/measurement_0p100_obs/model_stage1.pt",
+        "label": "FIM \u00b7 \u03b5=0.1 \u00b7 Observation \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "FIM",
+        "stage": "Stage 1",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.1,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/measurement_0p100_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/open_cfg/hard_ood/model_transfer.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "Open",
+        "stage": "Hard transfer",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/open_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/open_cfg/model.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Final",
+        "family": "spline",
+        "mode_label": "Open",
+        "stage": "Final",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/open_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/open_cfg/model_pretrained.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "Open",
+        "stage": "Pretrained",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/open_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/open_cfg/model_stage1.pt",
+        "label": "Open \u00b7 Configuration \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "Open",
+        "stage": "Stage 1",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/open_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/open_obs/hard_ood/model_transfer.pt",
+        "label": "Open \u00b7 Observation \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "Open",
+        "stage": "Hard transfer",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/open_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/open_obs/model.pt",
+        "label": "Open \u00b7 Observation \u00b7 Final",
+        "family": "spline",
+        "mode_label": "Open",
+        "stage": "Final",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/open_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/open_obs/model_pretrained.pt",
+        "label": "Open \u00b7 Observation \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "Open",
+        "stage": "Pretrained",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/open_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/open_obs/model_stage1.pt",
+        "label": "Open \u00b7 Observation \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "Open",
+        "stage": "Stage 1",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/open_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/periodic_cfg/hard_ood/model_transfer.pt",
+        "label": "Periodic \u00b7 Configuration \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "Periodic",
+        "stage": "Hard transfer",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/periodic_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/periodic_cfg/model.pt",
+        "label": "Periodic \u00b7 Configuration \u00b7 Final",
+        "family": "spline",
+        "mode_label": "Periodic",
+        "stage": "Final",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/periodic_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/periodic_cfg/model_pretrained.pt",
+        "label": "Periodic \u00b7 Configuration \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "Periodic",
+        "stage": "Pretrained",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/periodic_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/periodic_cfg/model_stage1.pt",
+        "label": "Periodic \u00b7 Configuration \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "Periodic",
+        "stage": "Stage 1",
+        "conditioning": "configuration",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/periodic_cfg"
+      },
+      {
+        "id": "spline_curve_ablation_v34/periodic_obs/hard_ood/model_transfer.pt",
+        "label": "Periodic \u00b7 Observation \u00b7 Hard transfer",
+        "family": "spline",
+        "mode_label": "Periodic",
+        "stage": "Hard transfer",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/periodic_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/periodic_obs/model.pt",
+        "label": "Periodic \u00b7 Observation \u00b7 Final",
+        "family": "spline",
+        "mode_label": "Periodic",
+        "stage": "Final",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/periodic_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/periodic_obs/model_pretrained.pt",
+        "label": "Periodic \u00b7 Observation \u00b7 Pretrained",
+        "family": "spline",
+        "mode_label": "Periodic",
+        "stage": "Pretrained",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/periodic_obs"
+      },
+      {
+        "id": "spline_curve_ablation_v34/periodic_obs/model_stage1.pt",
+        "label": "Periodic \u00b7 Observation \u00b7 Stage 1",
+        "family": "spline",
+        "mode_label": "Periodic",
+        "stage": "Stage 1",
+        "conditioning": "observation",
+        "defaults": {
+          "steps": 30,
+          "tolerance": 0.04,
+          "fim": false
+        },
+        "tasks": {
+          "test": 1,
+          "hard_test": 1
+        },
+        "comparison_group": "spline_curve_ablation_v34/periodic_obs"
+      }
+    ],
+    "count": 58
+  },
+  "previews": [
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pose.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "629f6b4ad06e416707d8.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pose.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "34a4325f9f8499d84919.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pretrain.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "44022768466a94db5f4a.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_pretrain.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "84cdbc11558d46cae854.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_shape.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "164b5a113db0ff0fb6b0.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/checkpoint_shape.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "2a295ed340b27798fa55.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/hard_ood/model_hard_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "00bd80a863baa9b282fe.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/hard_ood/model_hard_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "aed6a1f6ceca315a5abd.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "1ce300f06a117710312d.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "f54200f3f2645d98a6cf.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model_shape_only.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "ab4b4744856591fff972.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/holonomic_hard/model_shape_only.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "12f6924759868edf9ecc.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pose.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "fcb6264844b14db4098f.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pose.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "9da17f06c33ff4826a40.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pretrain.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "aa5df9e3e0845d60de6f.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_pretrain.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "bb23d1c3f39fcf838326.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_shape.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "b5a2654961c58a668745.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/checkpoint_shape.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "c4d586570cb765e3c6e3.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/hard_ood/model_hard_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "644a2aa60c3eca6d3883.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/hard_ood/model_hard_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "75df95b64264ed9d5b99.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a3325cdfe10f247740c1.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "1485a0cd5ed768ddc05a.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model_shape_only.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "e1311c294e167e0325e6.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/measurement_tol_0p1500/model_shape_only.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "5c4079f9e241f791915f.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pose.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "6742a0743f659e02cd60.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pose.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "6dd235f1419cf5585fa5.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pretrain.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "e6f33036c6514504104d.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_pretrain.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "5ba56d20b3987de4893e.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_shape.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "3c5e0aab6a46a86f9ffd.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/checkpoint_shape.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "2239b4ef6d241211aca5.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/hard_ood/model_hard_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "8ba728dadb7eab33c3db.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/hard_ood/model_hard_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "37a58b69a45b8653561c.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "3ab3d500400f50143829.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a1d514c9a45d08a71483.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/model_shape_only.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a4743f699b4195420214.json"
+    },
+    {
+      "checkpoint": "multilink_shared_circle_crescent_v35_again/open/model_shape_only.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "c76e3c79b73f2566d68b.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "fb7e96f6d70e0cfef888.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "4123efd1f76a9a2b16f8.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "ac2ddd0e92fa52784fe9.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "d4deccbcc3199a17243a.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "e37f155d52b832bfd593.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "376cf86e5a9fd3c4b0fb.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "ec9aea5f538d09cbe810.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_cfg/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "1fd6d9f13da3746ba056.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "cbe7a0f0ba19d0e3535b.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "af007bee950af6ca9c8c.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a1e37fada5746903b143.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "bfd9d3f869af22300fb6.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "24b38754f252bfb340c0.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "b60b15ea5f2f1e4aee2e.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "9d5c24e4be055459d66d.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p020_obs/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "418fdd33e08b090288ce.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "77abf4636cf72264eefd.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "3f1a523eac4e96bcfb29.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "3279efbdaec346e23068.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "23424a9a14430fd90c92.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "656810a90f61eac17eb8.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "63b8a78f544ac2a1fcc5.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "b42fec569b3c951d411c.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_cfg/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "3f0f1bd16ad9940306eb.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a8d90cc5cf1c5a84eb65.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "34ebc9ea0e620c0591b9.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "819d5ac47b64cdc56dd3.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "aa02102ea205d490dcba.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "113d56c3e515c5629894.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a2bc7eb307062cad5cfd.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "42958499c3e688a3d32c.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p050_obs/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "b2b80656b668e0ee914a.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a61adba7f3cc531a6de7.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "f312149955dd82be2ec2.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "5de0e43e9aec90afc654.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "3606e31a5f3b5fd173fd.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "5e50965d1a0a723f5926.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "f9f3fe5223d69470bff2.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "7bb41466b1a4e4f3e95e.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_cfg/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "9d23d775ff0e151fa6b5.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "beaef10cd74b4fbe87a6.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "2ed2ccdb02269a402af4.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "cbf4cd46d076bd64a807.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "d19f29fb72f82322c407.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "7dac35da2d216168aa2b.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "610ee197535aee2675f2.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "c678064c16f59961030b.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/measurement_0p100_obs/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "60fc5b46e10511d32a4e.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "32d5a217662e84c8b071.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "24d6267a8943d369b2f6.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "3437a78fe1233a8fc7f7.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "121f424cc5a9c3a3a776.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "e907568a2683aba9067e.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "797b9ae13c41ea43dd87.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a082fe5e7b841664ae94.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_cfg/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "5b0b2ea8f4e33c811dd9.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "e7f5d78ca4a43eb9f47c.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a28475a29215222acd06.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "aaeae2ae3c7f7d0e4f76.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "4a691d9207f5a2968e14.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "67a5cc7c38f04a2a330c.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "f62d86ce510f0104cebf.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "68e2c351cbdc4344802a.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/open_obs/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "37ae5d1c02988e2a00d5.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "3d44046cbbc6deb29568.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "2d00b2e6b5975f4b2bf3.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "350d2ee15afce8dbb2ec.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "04f388c5988a0a769a76.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "52042112cbb9997de77b.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "d8638797fc5fda2ff53a.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "bb5f6c3c50402c5a3ea5.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_cfg/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "9d18a9279ed246842a21.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/hard_ood/model_transfer.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "7cf1bf6e70f1302f863b.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/hard_ood/model_transfer.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "7ad11bef225c47e8f3bf.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "af62c02d93b2b123b2aa.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "ddc8d432686a3bb55ee2.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model_pretrained.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "a5855912190db08e07ce.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model_pretrained.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "22677e8e75b2a347aae6.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model_stage1.pt",
+      "group": "test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "222896196750cd2c34da.json"
+    },
+    {
+      "checkpoint": "spline_curve_ablation_v34/periodic_obs/model_stage1.pt",
+      "group": "hard_test",
+      "task_index": 0,
+      "horizon": 2,
+      "file": "bf0658ecf06addf73b7b.json"
+    }
+  ],
+  "precision": "8 significant digits",
+  "curve_points": 80,
+  "description": "Saved checkpoint inference; view/playback controls remain interactive without a server."
+}

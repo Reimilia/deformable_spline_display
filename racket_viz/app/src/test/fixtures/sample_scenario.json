@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "mode": "free",
+    "I": [0.075, 0.875, 0.95],
+    "R_cas": 1.5,
+    "segments": [
+      { "start": 0, "end": 3, "label": "Stable fixed point", "caption": "Steady spin, no precession.", "dot_color": "#44ee66" }
+    ],
+    "H_axis": [11.486, 0.984, 0.907]
+  },
+  "frames": {
+    "t": [0.0, 0.5, 1.0],
+    "quaternion": [
+      [1.0, 0.0, 0.0, 0.0],
+      [0.9998, 0.02, 0.0, 0.0],
+      [0.9992, 0.04, 0.0, 0.0]
+    ],
+    "M_body": [
+      [1.5, 0.0, 0.0],
+      [1.5, 0.0, 0.0],
+      [1.5, 0.0, 0.0]
+    ],
+    "controller_torque": [
+      [0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0]
+    ]
+  },
+  "background": {
+    "trajectories": [],
+    "separatrices": [],
+    "stable_fixed_points": [[1.5, 0.0, 0.0], [-1.5, 0.0, 0.0]],
+    "unstable_fixed_points": [[0.0, 1.5, 0.0], [0.0, -1.5, 0.0]]
+  },
+  "geometry": {
+    "verts_body": [
+      [-1.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0],
+      [1.0, 0.5, 0.0],
+      [1.0, -0.5, 0.0],
+      [1.8, 0.0, 0.0]
+    ],
+    "handle_idx": [0, 1],
+    "hoop_idx": [2, 3, 4],
+    "face_thickness": 0.04,
+    "face_normal_body": [0.0, 0.0, 1.0]
+  }
+}

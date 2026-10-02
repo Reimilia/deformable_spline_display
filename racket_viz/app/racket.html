@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Racket Viz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* "Blueprint" theme -- technical drafting-table, deep navy with chalk-white
+       ink. Every color used by the canvas/WebGL scenes lives in src/theme.js;
+       these are the same values, kept in sync by hand (see theme.js's own
+       note), for the surrounding chrome (backgrounds, borders, sidebar
+       controls) that CSS owns instead. */
+    :root {
+      --bg: #0b1e33;
+      --panel-bg: #0f2743;
+      --border: #2a4d73;
+      --text: #eaf6ff;
+      --muted: #9db6d1;
+      --sidebar-bg: #0d233d;
+      --stable: #5ec8e0;
+      --unstable: #ff8a75;
+      --imax: #f4b942;
+      --current: #ffe27a;
+      --target: #e0a85c;
+      --trajectory: #3a7ca8;
+      --separatrix: #d97a4d;
+      --font: 'IBM Plex Mono', ui-monospace, monospace;
+    }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); }
+    #app-layout { display: flex; height: 100vh; }
+    #main-content { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+    #controls { padding: 8px 12px; display: flex; gap: 12px; align-items: center; flex-shrink: 0; color: var(--muted); }
+    #panels { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; flex: 1; min-height: 0; gap: 20px; padding: 20px; box-sizing: border-box; }
+    /* min-height/width: 0 is required here -- grid items otherwise default to
+       min-height: auto, which for a <canvas> child equals its own width/height
+       attribute. Since those attributes are set from this panel's clientHeight
+       (see resize2DCanvas in main.js), that creates a feedback loop: a single
+       bad resize can inflate the canvas attribute, which inflates the grid
+       row's min-content size, which inflates the next resize, runaway. */
+    /* Each grid cell is a label (outside, in the buffer) stacked above the
+       bordered panel itself -- min-height/width: 0 needed on BOTH the grid
+       item (.panel-wrap) and the flex item (.panel) for the same reason as
+       below: a canvas's own height attribute would otherwise inflate their
+       auto min-size and feed back into the next resize. */
+    .panel-wrap { display: flex; flex-direction: column; min-height: 0; min-width: 0; }
+    /* Label + Explain toggle share one row, outside the bordered box entirely
+       -- keeping the toggle out here (not inside .flip-outer) means it never
+       takes part in the 3D flip transform, so it stays crisp and clickable
+       instead of blurring/rotating along with the panel mid-flip. */
+    .panel-label-row { flex-shrink: 0; min-height: 16px; padding-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
+    .panel-label { font-size: 13px; font-weight: 500; color: var(--muted); }
+    /* Fixed (not min-) height so a legend that happens to wrap to 2 lines
+       doesn't shrink its own panel more than a sibling panel's legend that
+       fits on 1 line -- all 4 panels stay the same visual size regardless of
+       how many legend items each one happens to have. */
+    .panel-legend { flex-shrink: 0; height: 32px; overflow: hidden; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 4px 12px; padding-top: 6px; font-size: 11px; color: var(--muted); }
+    .legend-item { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+    /* Stacks on top of a panel's normal-flow canvas (e.g. control-canvas'
+       2D/3D pair) so a single JS-toggled display:none/block swaps which one
+       shows, instead of needing separate layout for each. */
+    canvas.overlay-canvas { position: absolute; top: 0; left: 0; display: none; }
+    /* "3D" toggle etc, INSIDE a flip-face -- flips away with its own face,
+       unlike .explain-toggle below which sits on the persistent outer layer. */
+    .panel-toggle {
+      position: absolute; top: 8px; right: 10px; display: flex; align-items: center; gap: 6px;
+      font-size: 11px; color: var(--muted); z-index: 2;
+    }
+    /* Native <input> checkboxes ignore backface-visibility in some browsers
+       (a known Chrome/WebKit quirk), so the front face's "3D" toggle can
+       still bleed through once .flip-inner has rotated to show the back --
+       hide it explicitly rather than relying on backface-visibility alone. */
+    .flip-inner.flipped .panel-toggle { display: none; }
+
+    /* Flip-card mechanic ("Explain" toggle): .flip-outer is the flex/grid
+       sizing box (replaces the old plain .panel), holding a perspective for
+       the 3D rotation. .flip-inner is what actually rotates 180deg; its two
+       .flip-face children (front = the live canvas, back = the explanation
+       text) are each full-size and backface-hidden, so exactly one is ever
+       visible. .explain-toggle lives in .panel-label-row, entirely outside
+       .flip-outer, so it never takes part in the 3D rotation -- flipping to
+       the explanation would otherwise blur/rotate the only control that can
+       flip back away with it. */
+    .flip-outer { position: relative; flex: 1; min-height: 0; min-width: 0; perspective: 1600px; }
+    .flip-inner { position: absolute; inset: 0; transform-style: preserve-3d; transition: transform 0.6s ease; }
+    .flip-inner.flipped { transform: rotateY(180deg); }
+    .flip-face {
+      position: absolute; inset: 0; backface-visibility: hidden; overflow: hidden;
+      background: var(--panel-bg); border: 1px solid var(--border); box-sizing: border-box;
+    }
+    .flip-face canvas { display: block; width: 100%; height: 100%; }
+    .flip-back {
+      transform: rotateY(180deg); overflow-y: auto; box-sizing: border-box;
+      padding: 14px 16px; font-size: 12px; line-height: 1.6; color: var(--text);
+    }
+    .flip-back p { margin: 0; }
+    /* Larger + centered reads better for the 3 shorter explanations; the
+       Casimir sphere's is longer (more concepts to cover) so it stays at the
+       base size/left-aligned, tightened for length instead -- see index.html. */
+    .flip-back.centered { text-align: center; font-size: 14px; }
+    .explain-toggle { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); flex-shrink: 0; }
+
+    #sidebar {
+      width: 300px; flex-shrink: 0; background: var(--sidebar-bg); border-left: 1px solid var(--border);
+      padding: 14px; overflow-y: auto; box-sizing: border-box;
+      display: flex; flex-direction: column; gap: 14px; font-size: 13px; color: var(--text); font-family: var(--font);
+    }
+    #sidebar h3 { margin: 0 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--imax); }
+    .field { display: flex; flex-direction: column; gap: 3px; }
+    .field label { display: flex; justify-content: space-between; color: var(--muted); }
+    .field input[type="range"] { width: 100%; }
+    .field-range { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); opacity: 0.8; }
+    .toggle-row { display: flex; align-items: center; gap: 8px; }
+    .sub-fields { padding-left: 4px; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 10px; }
+    .presets { display: flex; flex-wrap: wrap; gap: 6px; }
+    .presets button { flex: 1 1 45%; font-size: 11px; padding: 6px 4px; }
+    .sidebar-action { display: block; width: 100%; padding: 12px; font-size: 14px; font-weight: 600; cursor: pointer; box-sizing: border-box; }
+    select, button, input { background: var(--panel-bg); color: var(--text); border: 1px solid var(--border); border-radius: 4px; font-family: var(--font); }
+    #run-button { background: var(--imax); color: var(--bg); border-color: var(--imax); font-weight: 600; }
+    .readout {
+      background: var(--panel-bg); border: 1px solid var(--border); border-radius: 4px; padding: 8px 10px;
+      font-size: 12px; color: var(--text); line-height: 1.6;
+    }
+    #torque-canvas { display: block; width: 100%; height: 70px; background: var(--panel-bg); border-radius: 4px; }
+    #control-readout { display: none; flex-direction: column; gap: 8px; }
+    .done-message { color: var(--stable); font-weight: 600; }
+
+    /* Rectangular tick-marked sliders: a thin track with tick marks baked in
+       at the quarter-points via a repeating gradient, and a rectangular
+       (not round) thumb -- matches the mockups the user picked from. */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 16px;
+      background: transparent;
+      margin: 0;
+      cursor: pointer;
+      border: none;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 3px;
+      border-radius: 1px;
+      background-color: var(--border);
+      background-image: repeating-linear-gradient(to right, var(--muted) 0, var(--muted) 1.5px, transparent 1.5px, transparent 25%);
+    }
+    input[type="range"]::-moz-range-track {
+      height: 3px;
+      border-radius: 1px;
+      background-color: var(--border);
+      background-image: repeating-linear-gradient(to right, var(--muted) 0, var(--muted) 1.5px, transparent 1.5px, transparent 25%);
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 4px;
+      height: 16px;
+      border-radius: 1px;
+      background: var(--imax);
+      margin-top: -6.5px;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 4px;
+      height: 16px;
+      border-radius: 1px;
+      background: var(--imax);
+      border: none;
+    }
+
+    /* Toggle switch (Control / Wind / per-panel toggles) */
+    .switch { position: relative; display: inline-block; width: 34px; height: 19px; flex-shrink: 0; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .switch .slider {
+      position: absolute; inset: 0; cursor: pointer; background: var(--panel-bg);
+      border: 1px solid var(--border); border-radius: 20px; transition: background-color 0.15s;
+    }
+    .switch .slider::before {
+      content: ""; position: absolute; height: 13px; width: 13px; left: 2px; bottom: 2px;
+      background: var(--muted); border-radius: 50%; transition: transform 0.15s, background-color 0.15s;
+    }
+    .switch input:checked + .slider { background: var(--border); border-color: var(--imax); }
+    .switch input:checked + .slider::before { background: var(--imax); transform: translateX(15px); }
+    .switch.small { width: 28px; height: 16px; }
+    .switch.small .slider::before { height: 11px; width: 11px; }
+    .switch.small input:checked + .slider::before { transform: translateX(12px); }
+  </style>
+</head>
+<body>
+  <div id="app-layout">
+    <div id="main-content">
+      <div id="controls">
+        <span id="time-readout"></span>
+      </div>
+      <div id="panels">
+        <div class="panel-wrap">
+          <div class="panel-label-row">
+            <div class="panel-label" id="racket-label"></div>
+            <div class="explain-toggle">
+              <span>Explain</span>
+              <label class="switch small"><input type="checkbox" class="explain-switch" data-flip="racket-flip" /><span class="slider"></span></label>
+            </div>
+          </div>
+          <div class="flip-outer">
+            <div class="flip-inner" id="racket-flip">
+              <div class="flip-face flip-front">
+                <canvas id="racket-canvas"></canvas>
+              </div>
+              <div class="flip-face flip-back centered">
+                <p>This is a live 3D render of the racket's actual orientation — not a canned animation. Its shape comes directly from the geometry sliders. The rotation each frame comes from numerically solving the real rigid-body equations of motion (Euler's equations) for the spin it started with. If Control is off, you're watching the raw spin of the racket. If Control is on, an attitude controller is actively steering it toward the chosen target axis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-legend"></div>
+        </div>
+        <div class="panel-wrap">
+          <div class="panel-label-row">
+            <div class="panel-label" id="control-panel-label">Hamiltonian energy (H)</div>
+            <div class="explain-toggle">
+              <span>Explain</span>
+              <label class="switch small"><input type="checkbox" class="explain-switch" data-flip="control-flip" /><span class="slider"></span></label>
+            </div>
+          </div>
+          <div class="flip-outer">
+            <div class="flip-inner" id="control-flip">
+              <div class="flip-face flip-front">
+                <canvas id="control-canvas"></canvas>
+                <canvas id="control-3d-canvas" class="overlay-canvas"></canvas>
+                <div class="panel-toggle">
+                  <span>3D</span>
+                  <label class="switch small"><input type="checkbox" id="hamiltonianViewToggle" /><span class="slider"></span></label>
+                </div>
+              </div>
+              <div class="flip-face flip-back centered">
+                <p>The Hamiltonian represents the total energy of the system, in this case, the racket's rotational kinetic energy. The dashed lines show the energy the racket would have if spinning purely about each of its three axes. The racket's actual energy (solid line) stays trapped between the smallest and largest of these forever. With Control on, the dashed line becomes the chosen target energy instead, and the solid line is no longer flat — it climbs or falls as the controller does real work to get there.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-legend" id="control-panel-legend"></div>
+        </div>
+        <div class="panel-wrap">
+          <div class="panel-label-row">
+            <div class="panel-label">Angular velocity</div>
+            <div class="explain-toggle">
+              <span>Explain</span>
+              <label class="switch small"><input type="checkbox" class="explain-switch" data-flip="omega-flip" /><span class="slider"></span></label>
+            </div>
+          </div>
+          <div class="flip-outer">
+            <div class="flip-inner" id="omega-flip">
+              <div class="flip-face flip-front">
+                <canvas id="omega-canvas"></canvas>
+              </div>
+              <div class="flip-face flip-back centered">
+                <p>This display shows the spin rate (radians/second) about each of the racket's principal axes, over time — long, intermediate, and short. Near the intermediate axis, all three swing through large, coupled oscillations instead of settling down, which is the visible signature of the instability. Near a stable axis (long or short), one component dominates while the other two stay as small, bounded wobbles.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-legend">
+            <span class="legend-item"><span class="legend-dot" style="background:var(--stable)"></span>long axis</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--unstable)"></span>intermediate axis</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--imax)"></span>short axis</span>
+          </div>
+        </div>
+        <div class="panel-wrap">
+          <div class="panel-label-row">
+            <div class="panel-label">Casimir Sphere</div>
+            <div class="explain-toggle">
+              <span>Explain</span>
+              <label class="switch small"><input type="checkbox" class="explain-switch" data-flip="sphere-flip" /><span class="slider"></span></label>
+            </div>
+          </div>
+          <div class="flip-outer">
+            <div class="flip-inner" id="sphere-flip">
+              <div class="flip-face flip-front">
+                <canvas id="sphere-canvas"></canvas>
+              </div>
+              <div class="flip-face flip-back">
+                <p>A Casimir is a conserved quantity, built into the physics itself rather than something we choose — here, it's the racket's total angular momentum. Since it never changes during a free spin, every trajectory stays confined to this sphere's surface. The light-blue and coral dots are the six equilibrium spins (stable and unstable); starting exactly on one, undisturbed, leaves the state frozen forever, since every derivative vanishes there. The orange separatrices pass exactly through the unstable points, marking the boundary between the nearby blue wobbling loops and a full flip. The yellow dot is the racket's actual state right now — under Control or Wind it can leave this sphere entirely, since angular momentum is only conserved for a truly free spin.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-legend">
+            <span class="legend-item"><span class="legend-dot" style="background:var(--current)"></span>current state</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--stable)"></span>stable fixed point</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--unstable)"></span>unstable fixed point</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--trajectory)"></span>trajectory</span>
+            <span class="legend-item"><span class="legend-dot" style="background:var(--separatrix)"></span>separatrix</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <!-- Presets temporarily removed (2026) -- not intuitive as buttons; kept
+           here commented out (and in main.js) to restore later rather than
+           rebuild from scratch.
+      <h3>Presets</h3>
+      <div class="presets">
+        <button id="preset-free">Free flip</button>
+        <button id="preset-imin">Control -&gt; imin</button>
+        <button id="preset-imax">Control -&gt; imax</button>
+        <button id="preset-align">Alignment</button>
+      </div>
+      -->
+
+      <h3>Racket geometry</h3>
+      <div class="field">
+        <label>Handle length <span id="handleLength-val"></span></label>
+        <input type="range" id="handleLength" min="0.5" max="2.0" step="0.05" value="1.0" />
+        <div class="field-range"><span>0.5</span><span>2.0</span></div>
+      </div>
+      <div class="field">
+        <label>Hoop length <span id="hoopLength-val"></span></label>
+        <input type="range" id="hoopLength" min="1.0" max="3.0" step="0.05" value="2.0" />
+        <div class="field-range"><span>1.0</span><span>3.0</span></div>
+      </div>
+      <div class="field">
+        <label>Hoop width <span id="hoopWidth-val"></span></label>
+        <input type="range" id="hoopWidth" min="0.5" max="2.0" step="0.05" value="1.0" />
+        <div class="field-range"><span>0.5</span><span>2.0</span></div>
+      </div>
+      <div class="field">
+        <label>Total mass <span id="totalMass-val"></span></label>
+        <input type="range" id="totalMass" min="0.3" max="3.0" step="0.05" value="1.0" />
+        <div class="field-range"><span>0.3</span><span>3.0</span></div>
+      </div>
+      <div class="field">
+        <label>Head-to-mass ratio <span id="hoopFraction-val"></span></label>
+        <input type="range" id="hoopFraction" min="0.2" max="0.8" step="0.05" value="0.6" />
+        <div class="field-range"><span>0.2</span><span>0.8</span></div>
+      </div>
+
+      <div class="readout" id="inertia-readout">Moments of inertia (short, intermediate, long axes): ...</div>
+
+      <h3>Motion</h3>
+      <div class="field">
+        <label>Starting axis</label>
+        <select id="startAxis">
+          <option value="imin">Long axis (stable)</option>
+          <option value="imid" selected>Intermediate axis (unstable)</option>
+          <option value="imax">Short axis (stable)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Starting perturbation <span id="startingPerturbation-val"></span></label>
+        <input type="range" id="startingPerturbation" min="0" max="0.1" step="0.002" value="0.02" />
+        <div class="field-range"><span>0</span><span>0.1</span></div>
+      </div>
+      <!-- Duration slider temporarily removed -- didn't make sense as a
+           control; runs now default to a long fixed duration (see main.js's
+           DEFAULT_DURATION_SECONDS) and are stopped manually via the Stop
+           button below instead of a preset cutoff.
+      <div class="field">
+        <label>Duration (s) <span id="duration-val"></span></label>
+        <input type="range" id="duration" min="2" max="30" step="1" value="10" />
+      </div>
+      -->
+
+      <div class="toggle-row">
+        <label class="switch"><input type="checkbox" id="controlOn" /><span class="slider"></span></label>
+        <span>Control</span>
+      </div>
+      <div class="sub-fields" id="control-subfields">
+        <div class="field">
+          <label>Ending axis</label>
+          <select id="endAxis">
+            <option value="imin">Long axis</option>
+            <option value="imid">Intermediate axis</option>
+            <option value="imax" selected>Short axis</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="control-readout">
+        <h3>Control function</h3>
+        <canvas id="torque-canvas"></canvas>
+        <div class="readout" id="control-metrics-text"></div>
+      </div>
+
+      <div class="toggle-row">
+        <label class="switch"><input type="checkbox" id="windOn" /><span class="slider"></span></label>
+        <span>Wind</span>
+      </div>
+      <div class="sub-fields" id="wind-subfields">
+        <div class="field">
+          <label>Wind strength (std) <span id="windStd-val"></span></label>
+          <input type="range" id="windStd" min="0" max="0.3" step="0.01" value="0.05" />
+          <div class="field-range"><span>0</span><span>0.3</span></div>
+        </div>
+      </div>
+
+      <button id="run-button" class="sidebar-action">Run</button>
+      <button id="pause-button" class="sidebar-action">Pause</button>
+      <button id="reset-button" class="sidebar-action">Reset</button>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
